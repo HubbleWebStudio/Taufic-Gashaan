@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
-import { Archivo, Space_Grotesk } from "next/font/google";
+import { Archivo, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 
 const archivo = Archivo({
-  variable: "--font-heading",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "900"],
+  weight: ["400", "500", "700", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-archivo",
+  display: "swap",
 });
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-body",
+const dmSerifDisplay = DM_Serif_Display({
+  weight: "400",
+  style: ["normal", "italic"],
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-serif",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -25,8 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${archivo.variable} ${spaceGrotesk.variable}`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="es" className={`${archivo.variable} ${dmSerifDisplay.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }
