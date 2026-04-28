@@ -125,6 +125,8 @@ Actualizar `./STATE-web.md` con la entrada:
 
 ## Reglas de Operación (Core)
 
+- **Sin imágenes de referencia, no hay prototipo.** Este skill NO puede operar "a ciegas". Si el usuario no ha provisto imágenes (en `capturas/` o como URL), pedirlas antes de empezar. Validado en Taufic 2026-04-28: con 4 imágenes el prototipo quedó aprobado al primer intento.
+- **Flujo de imágenes en Taufic:** el usuario sube las imágenes a `../capturas/` antes de invocar el skill. El agente las lee con One-Time Read en el Paso 1 de cada sección.
 - **Fidelidad sobre estética.** Si la referencia tiene algo que parece "feo", se replica igual. No se interpreta.
 - **Sección por sección, sin saltarse.** El orden del plan es el orden de construcción.
 - **Sin frameworks.** HTML semántico + CSS embebido. Nada más.

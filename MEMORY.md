@@ -19,12 +19,12 @@
 
 ## Identidad de Marca
 
-- **Colores canónicos:**
-  - `#C8102E` — Rojo Taufic (acento y CTA)
-  - `#1A1A1A` — Negro profundo (base)
-  - `#F5F0EB` — Blanco cálido (fondo)
-- **Tipografía:** Archivo (titulares, peso 900) / Space Grotesk (cuerpo)
-- **Estilo:** Exaggerated Minimalism — tipografía oversized, alto contraste, esquinas rectas (radio 0 px)
+- **Colores del sistema de diseño (canónicos — aprobados 2026-04-28):**
+  - `#0D0D0D` — Negro (base y tipografía)
+  - `#FFFFFF` — Blanco (fondo)
+  - `#C8102E` — Rojo Taufic (acento, CTA, marcadores)
+- **Tipografía:** Archivo 900 (titulares oversized) + DM Serif Display italic (taglines, quotes)
+- **Estilo:** Cinematic minimalism — tipografía oversized, alto contraste, bordes 1px, glassmorphism en cards flotantes
 - **Voz de marca:** Premium, directa, sin adornos. "Proyectos que perduran."
 - **Diferenciador clave:** Pionero mundial en arquitectura de contenedores habitables de lujo. Reconocido por AMDI y medios internacionales.
 - **Design system MASTER.md:** `./web-app/design-system/taufic-gashaan/MASTER.md`
@@ -33,10 +33,10 @@
 
 | Skill | Estado | Notas |
 |---|---|---|
-| `sv-exploracion` | ✅ completado — 2026-04-27 | Deck Canva `DAHIElIP_0Q` (30 slides). Prototipo web en `./web-app/` |
-| `wd-diseño` | ⚠️ parcial — 2026-04-28 | Prototipo construido y corriendo. Faltan: STATE-web.md completo + wd-auditoria (Fase D) |
+| `sv-exploracion` | ✅ completado — 2026-04-27 | Deck Canva `DAHIElIP_0Q` (30 slides). |
+| `wd-prototipo` | ✅ completado — 2026-04-28 | `prototipo.html` aprobado (14 secciones). Portado a Next.js. Deployado en Vercel. |
 | `sv-propuesta` | ⏳ pendiente | Requiere brief llenado post-reunión |
-| `wd-arranque` | 🔒 bloqueado | Se activa después de sv-propuesta |
+| `wd-construccion` | ⏳ pendiente | Usar `prototipo.html` aprobado como referencia. Activar cuando haya luz verde del cliente. |
 | `mk-arranque` | 🔒 bloqueado | Se activa después de sv-propuesta |
 
 ## Entregables Generados
@@ -47,12 +47,20 @@
 - **30 slides** — diagnóstico, benchmarking (screenshots reales), competencia local GDL + referentes internacionales, arquitectura del sitio, sistema de diseño, banner IA, prototipo, precios
 - **Banner slide 16:** Generado con Imagen 4 (Gemini). Asset Canva: `MAHIF0iMNdg`. Drive: `1KhouwkFUTBodLW99kBS8SwCLuskCilU9`
 
-### Prototipo Web
-- **Ruta:** `./web-app/`
-- **Stack:** Next.js 14 · TypeScript · Tailwind CSS v4 · Framer Motion · Lucide
-- **Dev server:** `npm run dev` desde `./web-app/` (típicamente localhost:3002 si 3000 está ocupado)
-- **Secciones:** Navbar · Hero · Proyectos (3 cards) · Nosotros · Contacto (WhatsApp CTA) · Footer
-- **TODO pendiente:** Reemplazar copy placeholder y fotos reales de proyectos antes de reunión real
+### Prototipo Web (aprobado 2026-04-28)
+- **Ruta local:** `./web-app/` — `npm run dev` (localhost:3002)
+- **Stack:** Next.js 16 · TypeScript · Tailwind CSS v4
+- **Repo GitHub:** `https://github.com/HubbleWebStudio/Taufic-Gashaan` (proyecto completo: agentes + web-app)
+- **Vercel:** Root Directory = `web-app` — redeploy automático en cada push a `main`
+- **HTML estático de referencia:** `./web-app/public/prototipo.html`
+- **Secciones (14):** Navbar · Hero texto · Hero imagen (glassmorphism) · Pill tags · Stats (dark) · Cinematic spec · Feature · Mini-features · Gallery grid · Testimonial (dark) · CTA banner (dark) · Process · Brand footer ("TAUFIC" oversized) · Footer bar
+- **TODO:** Reemplazar imágenes Unsplash + copy placeholder con assets reales del cliente antes de lanzar
+
+## Notas para la próxima sesión — 2026-04-28
+
+- **`wd-prototipo` se activa directo desde este workspace** — ya no desde Maestro. Santiago subirá imágenes de referencia a `capturas/` antes de invocar el skill. Con imágenes el prototipo sale en un solo intento.
+- **El prototipo aprobado es la referencia para `wd-construccion`** — no generar secciones desde cero. Usar `./web-app/public/prototipo.html` como guía de fidelidad.
+- **Próximo hito:** reunión con Taufic → brief → `sv-propuesta` → luz verde → `wd-construccion` para portar secciones a componentes Next.js reales con imágenes y copy del cliente.
 
 ## Notas del Cliente
 
