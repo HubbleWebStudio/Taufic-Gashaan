@@ -1,0 +1,25 @@
+# Next.js
+web-app/.next/
+web-app/out/
+web-app/build/
+
+# Dependencias
+web-app/node_modules/
+
+# Archivos de entorno
+web-app/.env*
+!web-app/.env.example
+
+# TypeScript build
+web-app/*.tsbuildinfo
+web-app/next-env.d.ts
+
+# Vercel
+web-app/.vercel
+
+# OS
+.DS_Store
+**/.DS_Store
+
+# Logs
+*.log
